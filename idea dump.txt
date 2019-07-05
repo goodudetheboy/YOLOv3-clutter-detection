@@ -1,0 +1,17 @@
+IDEA DUMP
+1. Image classification - face_regionality, food_regionality,  face_pet, face_couple, info_password, scenery_regionality, animals_regionality, game_company,
+location_regionality,  
+2. Object detection - book, movement, house, building, people, CAMOUFLAGE
+3. Semantic segmentation - code_comments_toolbar, human_animals, crossroad_
+4. Face recognition - face_identity, president_country, wheres-waldo,
+5. Face orientation - literally-face-orientation, face-orientiation-classification
+6. Pose estimation - dance-styles-guessing, criminal-guessing, 
+7. Image colorization - painting-detected-canvas
+8. Super resolution - god damn i have not a single idea
+9. Speech recognition - speech_identity, song_name, 
+10. OCR - 
+11. Question answering - SAT-question-answering
+12. Sentence similarity ranking
+13. Named entity recognition 	
+14. Slot filling 
+15. Spelling correction 
