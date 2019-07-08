@@ -1,2 +1,3 @@
 IDEA DUMP #2
-key, book, color_clothing, mouse, pen, water-bottle, marker, remote, water-glass, chair, brain, earpods, watch, glasses, shoes, cards, 
+key, book, color_clothing, mouse, pen, water-bottle, marker, remote, water-glass, chair, brain, earpods, watch, glasses, shoes, cards, wallet, phones
+purse, lipstick, socks, nail-clipper, small-bag, envelope, wall-socket, 
