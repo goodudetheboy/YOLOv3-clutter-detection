@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{tabto}
+\usepackage{graphicx}
+\usepackage[utf8]{vietnam}
+\usepackage{url}
+\usepackage[figurename=Fig.]{caption}
+\renewcommand{\figurename}{Fig.}
+\usepackage{caption}
+
+
+\title{\textbf{MaSSP AI PROJECT DAILY REPORT NO. 2}}
+\author{\textbf{Team 3:}
+Nìm Trí Nghĩa -
+Hồ Chí Vương -
+Nguyễn Khắc Minh}
+\date{Monday, July 8th, 2019}
+
+\begin{document}
+\maketitle
+\textit{Project theme: OBJECT DETECTION – Finding certain objects from input images or videos} 
+\graphicspath{ {./images/} }
+
+\section{Current progress}
+\begin{itemize}
+	\item We decided to build both a website and an android app for our AI model.
+	\item We switched our previous weight (yolo-tiny) with a more accurate one (yolo-spp).
+	\item We put together the code and added a camera into a somewhat complete app for object detection (average time is around 15s!)
+	\item We currently are trying to run our model on a video.
+\end{itemize}
+
+\subsection{Website and app}
+We have adopted the approach recommended by mentor Giang to come up with a wrapper for our yet finished AI core. Member Minh is currently in charge of creating a website UI that we have agreed on, and all of us are working on how to make an android app. The approach that we have agreed on at the moment is to use Google's Firebase as the server to run our code and a GUI made with either Kivy or Android Studio. The app will feature a camera to take live picture, which is then sent to the server, and buttons for items that the user wants to find (e.g., a key).
+
+\subsection{Yolo-spp}
+Our last set of weight was very quick and light. But where it makes up for speed, it lacks accuracy and so we decided to use a different set of weight. The hefty 12GB of VRAM that Colab provided for us means that we can put our hands on the intense yolo-spp set of weights. And the results that we received afterwards were much more accurate predictions of item.
+
+This is obvious from our test of last time's "pizza party" (reference Daily report no.1):
+
+\begin{figure}
+\centerline{\includegraphics{pizza_party_old.PNG}}
+    \label{fig:new pizza party}
+    \caption*{Image 1: old results}
+\centerline{\includegraphics{pizza_party_improved.PNG}}
+	\label{fig:old pizza party}
+    \caption*{Image 2: new results}
+\end{figure}
+\subsection{code for app}
+This is written and put together by member Nghĩa.
+\url{https://colab.research.google.com/drive/1fL9aLS5A5L4cSkJlfdvZm7wDx4P4APMw}
+\begin{figure}[h]
+\centerline{\includegraphics{Capture.PNG}}
+	\label{fig:live cam}
+	\caption*{Image 3: live picture from camera}
+\end{figure}
+\subsection{Video detector}
+So far, member Vương is trying out the video function, progress is a bit slow because he has to run it locally but he can already make the program run, our final barrier is to get it to run (since it kept freezing after a few frames).
+
+\section{Obstacles}
+\begin{itemize}
+	\item We had to find a way to code an app with python, but in the end we decided to integrate it with a server (maybe Firebase)
+	\item the video detection program is very taxing for our laptop and so we can't test it for too long
+\end{itemize}
+\section{Plans}
+We are currently working on the app and video detector, although we should be able to finish off the detector by next time's report.
+\end{document}
+
+
+
+
+
