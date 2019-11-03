@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{tabto}
+\usepackage{graphicx}
+
+\title{\textbf{MaSSP AI PROJECT DAILY REPORT NO. 3}}
+\author{\textbf{Team 3}\\
+Ho Chi Vuong\\
+Nim Tri Nghia\\
+Nguyen Khac Minh}
+\date{Wednesday, July 10th, 2019}
+
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+\begin{document}
+\maketitle
+\textit{Project theme: OBJECT DETECTION – Finding certain objects from input images or videos} 
+\graphicspath{ {./images/} }
+
+\section{General Progress }
+\begin{itemize}
+	\item Decided to build both a Website and a Desktop application for our AI model.
+	\item Successfully implemented YOLO model on realtime object detection through camera using OpenCV library
+	\item Trying to implemented the GUI for the app
+	\item Decided \textit{not} to retrain the YOLO model as the pre-trained one already covers most of what we have in mind
+\end{itemize}
+	
+
+
+\section{Future Plan}
+
+\begin{itemize}
+	\item Finish making a server using Minh's computer as the host to run the code on, 
+	\item Wrap up the desktop application
+	\item Finish the technical report and presentation slides for the mock presentation day
+\end{itemize}
+
+\section{Obstacles}
+\begin{itemize}
+	\item Minor problem while developing the website like security error and such
+	\item \code{UnknownError} arise during the re-tweaking of our code (e.g. System exit 2, \code{AttributeError})
+	\begin{itemize}
+		\item Sometimes, when we try to run two .ipynb file at the same time, both do not run and exited with \code{AttributeError}
+	\end{itemize}
+	\item We are unable to run the desktop application package that mentors send us (details in section 4.1)
+\end{itemize}
+
+\section{Demo}
+
+The Colab link containing the progress so far: \emph{\underline{https://drive.google.com/open?id=}}\\
+\emph{\underline{186OWo8ZU0dRYfMjsqumBpMVNRWlR2kwh}} as well as our team's repository on GitHub: \emph{\underline{https://github.com/goodudetheboy/MaSSP-Team3}}.
+
+\subsection{AI Core Analysis}
+	\begin{itemize}
+		\item Using the \code{detect\_video} function extracted from \code{yolo.py} file from the \code{keras-yolo-master}, we tweaked it to fit into our code and made it into \code{detect\_vid} function.\\\\
+		\centerline{\includegraphics[scale=1]{IMG17}}\\\\
+		\centerline{\textbf{Image 1: \code{detect\_vid} function and its arguments}}
+		\item \code{0} means that OpenCV will open the webcam. The \code{desired\_classes}, as stated in Report No 1, is to define what we want to find by the program, ranging from 1 to 81, and 0 to find everything.
+		\item If the code run successfully, the output will be somewhere in the line of this: \\\\
+		 \centerline{\includegraphics[scale=0.3]{img18}}\\\\
+		\centerline{\textbf{Image 2: Webcam window opened by OpenCV as well as the analysis}}
+		\item Label and score will be added soon in the top left corner of the green bounding boxes.
+	\end{itemize}
+\subsection{GUI Analysis}
+	\begin{itemize}
+		\item Though we have decided to go the extra mile to do \textit{two} Wrapper for our core, we have run into quite a trouble
+	\end{itemize}
+	\subsubsection{Web}
+		\begin{itemize}
+		\item Here is what we have gotten so far:\\\\
+		 \centerline{\includegraphics[scale=0.2]{img19}}\\\\
+		\centerline{\textbf{Image 3: Our Web application's GUI}}
+		\item As Minh is working on this, he has ran on some trouble relating the \code{File Not Found} error, specifically not being able to load the .js file for the webpage.
+		\end{itemize}
+	\subsubsection{Desktop Application}
+		\begin{itemize}
+			\item When Vuong tried to run the camera.py from the desktop application package that the mentors sent, it reports the following error: \code{ModuleNotFoundError: No module named 'PyQt5.QtMultimedia'}. StackOverFlow does not have much information about such error, and the only solution to fix it is to downgrade the \code{pyqt} library. Even after Vuong did that, nothing changed.
+		\end{itemize}
+\end{document}		
