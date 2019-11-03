@@ -54,7 +54,7 @@ Nìm Trí Nghĩa - Hồ Chí Vương - Nguyễn Khắc Minh}
 
 \subsection{How we trained our model}
 \tab We used the Detection system \textbf{Yolov3} and dataset from \textbf{the Cocodataset} to train our model. The results were that the model is extremely sensitive to new images and can detect items with moderate accuracy most of the time. However, due to how the system work, the bigger the item, the harder it is for it to detect.\\
-\tab Should you want your program to detect even more sensitively, you can trade off a bit of your accuracy but for more results by decreasing the IoU and score variables in the \textbf{$reading_video.py$} file.
+\tab Should you want to increase its sensitivity (i.e., pick up cropped out images), you can trade off a bit of your accuracy but for more results by decreasing the IoU and score variables in the \textbf{$reading_video.py$} file.
 
 \section{Unified framework (TEFPA)}
 \subsection{T - Task}
